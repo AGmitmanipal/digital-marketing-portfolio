@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --forest-900: #082116;
+    --forest-800: #0F3324;
+    --forest-700: #164331;
+    --forest-600: #1F5740;
+    
+    --ocean-900: #102A38;
+    --ocean-800: #163B4D;
+    --ocean-700: #1D4F66;
+    --ocean-600: #2B6E8D;
+    
+    --sunset-600: #C2532A;
+    --sunset-500: #D36135;
+    --sunset-400: #E07A5F;
+    --sunset-300: #EFA694;
+
+    --sand-100: #FCFAF7;
+    --sand-200: #F7F3EB;
+    --sand-300: #EDE5D4;
+    --sand-400: #DFD3BD;
+
+    --tropical-green: #2A7C55;
+    --tropical-emerald: #10B981;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #FAF7F2;
+    color: #242421;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-code {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Custom subtle parchment texture effect */
+.bg-parchment {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#d3c9b8 0.75px, transparent 0.75px), radial-gradient(#d3c9b8 0.75px, #FAF7F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Glassmorphic card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 211, 189, 0.5);
+}
+
+.glass-card-dark {
+  background: rgba(15, 51, 36, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #164331;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0F3324;
+}
+
+/* Image reveal & frame border */
+.vintage-frame {
+  position: relative;
+  box-shadow: 0 20px 40px -15px rgba(15, 51, 36, 0.25);
+}
+
+.vintage-frame::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(224, 122, 95, 0.35);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 10;
+}
